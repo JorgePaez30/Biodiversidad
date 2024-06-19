@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cundinamarca</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="padre">
+        <header class="header">
+            <div class="menu">
+                <div class="logo">
+                    <a href="index.html">GreenBio</a>
+                </div>
+                <nav class="nav">
+                    <a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a>
+                    <a href="cundinamarca.html"><i class="fa-solid fa-mountain-sun"></i>Cundinamarca</a>
+                    <a href="#"><i class="fa-solid fa-mountain-sun"></i>Boyaca</a>
+                    <a href="mapaboyaca.html"><i class="fa-solid fa-earth-americas"></i>Mapa Boyaca</a>
+                </nav>
+                <div class="social">
+                    <div><a href="https://www.facebook.com/people/Protejamos-Nuestra-Biodiversidad/61559689453318/?mibextid=ZbWKwL/" class="facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+                    <div><a href="https://twitter.com/" class="twitter" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></div>
+                    <div><a href="https://www.instagram.com/" class="instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                    <div><a href="https://www.whatsapp.com/" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div>
+                    
+                </div>
+            </div>
+            <!-- contenedor presentacion de diapositivas -->
+            <div class="contenedor">
+
+        <!-- imagenes de ancho completo con numero y texto del titulo -->
+        <div class="diapositiva fade">
+        <div class="numbertext">1 / 3</div>
+        <img class="imagen" src="Imagenes/bird.jpg">
+        <div class="text">Boyacá es conocido por su diversidad de ecosistemas, que van desde las altas montañas de la Cordillera Oriental hasta los valles interandinos. Estos incluyen páramos, bosques andinos, bosques de niebla, selvas y zonas de alta montaña. Esta variabilidad de hábitats contribuye a una amplia biodiversidad de flora y fauna en la región.</div>
+        </div>
+        <div class="diapositiva fade">
+        <div class="numbertext">2 / 3</div>
+        <img class="imagen" src="Imagenes/bo7.jpg">
+        <div class="text"> El departamento alberga áreas protegidas clave, como el Santuario de Fauna y Flora de Iguaque y el Parque Nacional Natural Pisba, que son fundamentales para la conservación de especies endémicas y amenazadas, así como para la provisión de servicios ecosistémicos como la regulación hídrica y la captura de carbono. La preservación de estos ecosistemas es crucial para mantener la biodiversidad no solo en Boyacá, sino también en todo el país y más allá.</div>
+        </div>
+        <div class="diapositiva fade">
+        <div class="numbertext">3 / 3</div>
+        <img class="imagen" src="Imagenes/bo5.jpg">
+        <div class="text"> Boyacá alberga numerosas especies endémicas, es decir, especies que se encuentran exclusivamente en esta región y no se encuentran en ningún otro lugar del mundo. Estas especies incluyen plantas, aves, anfibios, insectos y mamíferos que han evolucionado en respuesta a las condiciones específicas del ambiente boyacense.</div>
+        </div>
+
+        <!--Botones siguiente y anterior -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!--hecer los puntos/circulos -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+        </header><br><br>
+        <div class="encabezado"><h1>BIODIVERSIDAD EN BOYACA</h1><br>
+            <p>El departamento de Boyacá, es notable por su rica biodiversidad, abarcando una variedad de ecosistemas que incluyen páramos, bosques andinos, y bosques húmedos tropicales. Alberga numerosas especies endémicas y en peligro de extinción, como el cóndor de los Andes y el oso de anteojos. Sus parques naturales, como el Parque Nacional Natural El Cocuy y el Santuario de Fauna y Flora Iguaque, protegen una diversidad de flora y fauna única.</p><br>
+        </div><br>
+    <div class="galeria">
+        
+
+    </div>
+    </div>
+    <div>
+        <footer>
+            <p>
+                <h3 style="color: #fff;">Proyecto cocreacion</h3>
+                <p style="color: #fff;"> Ministerio de las comunicaciones en asocio con la universidad Sergio Arboleda <br> 
+                    <i class="fa-solid fa-phone"></i> Teléfonos: (57) 310 2950253, <br> <i class="fa-regular fa-envelope"></i> Correo electrónico: edgar.ortiz.talentotech@usa.edu.co
+                </p> 
+                <p style="color: #fff;"><b>Copyright © 2024. Todos los derechos reservados.</b></p>
+            </p>
+        </footer>
+</div>
+</body>
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// controles siguiente anterior
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+// controles de imagen en miniatura
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("diapositiva");
+let dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+</script>
+<script src="bio.js"></script>
+</body>
+</html>

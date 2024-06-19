@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cundinamarca</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="padre">
+        <header class="header">
+            <div class="menu">
+                <div class="logo">
+                    <a href="index.html">GreenBio</a>
+                </div>
+                <nav class="nav">
+                    <a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a>
+                    <a href="cundinamarca.html"><i class="fa-solid fa-mountain-sun"></i>Cundinamarca</a>
+                    <a href="boyaca.html"><i class="fa-solid fa-mountain-sun"></i>Boyaca</a>
+                </nav>
+                <div class="social">
+                    <div><a href="https://www.facebook.com/people/Protejamos-Nuestra-Biodiversidad/61559689453318/?mibextid=ZbWKwL/" class="facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+                    <div><a href="https://twitter.com/" class="twitter" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></div>
+                    <div><a href="https://www.instagram.com/" class="instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                    <div><a href="https://www.whatsapp.com/" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div>
+                    
+                </div>
+            </div>
+        </header>
+        <div>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1J3gWuZOswpxT9_xdcYm_wmnjddYojWY&ehbc=2E312F" width="100%" height="480"></iframe>
+        </div>
+        </div>
+            
+    <div>
+        <footer>
+            <p>
+                <h3 style="color: #fff;">Proyecto cocreacion</h3>
+                <p style="color: #fff;"> Ministerio de las comunicaciones en asocio con la universidad Sergio Arboleda <br> 
+                    <i class="fa-solid fa-phone"></i> Teléfonos: (57) 310 2950253, <br> <i class="fa-regular fa-envelope"></i> Correo electrónico: edgar.ortiz.talentotech@usa.edu.co
+                </p> 
+                <p style="color: #fff;"><b>Copyright © 2024. Todos los derechos reservados.</b></p>
+            </p>
+        </footer>
+</div>
+</body>
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// controles siguiente anterior
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+// controles de imagen en miniatura
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("diapositiva");
+let dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>

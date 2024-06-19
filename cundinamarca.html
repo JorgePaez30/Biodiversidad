@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cundinamarca</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="padre">
+        <header class="header">
+            <div class="menu">
+                <div class="logo">
+                    <a href="index.html">GreenBio</a>
+                </div>
+                <nav class="nav">
+                    <a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a>
+                    <a href="#"><i class="fa-solid fa-mountain-sun"></i>Cundinamarca</a>
+                    <a href="boyaca.html"><i class="fa-solid fa-mountain-sun"></i>Boyaca</a>
+                    <a href="mapacundi.html"><i class="fa-solid fa-earth-americas"></i>Mapas Cundinamarca</a>
+                </nav>
+                <div class="social">
+                    <div><a href="https://www.facebook.com/people/Protejamos-Nuestra-Biodiversidad/61559689453318/?mibextid=ZbWKwL" class="facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
+                    <div><a href="https://twitter.com/" class="twitter" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></div>
+                    <div><a href="https://www.instagram.com/" class="instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                    <div><a href="https://www.whatsapp.com/" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div>
+                    
+                </div>
+            </div>
+            <!-- contenedor presentacion de diapositivas -->
+    <div class="contenedor">
+
+        <!-- imagenes de ancho completo con numero y texto del titulo -->
+        <div class="diapositiva fade">
+        <div class="numbertext">1 / 3</div>
+        <img class="imagen" src="Imagenes/colibri.jpg">
+        <div class="text">Cundinamarca alberga una amplia variedad de ecosistemas debido a su topografía diversa que va desde los valles interandinos hasta las montañas de la Cordillera Oriental. Estos incluyen páramos, bosques andinos, bosques de niebla, valles interandinos y sabanas, lo que contribuye a una alta biodiversidad de flora y fauna.</div>
+        </div>
+
+        <div class="diapositiva fade">
+        <div class="numbertext">2 / 3</div>
+        <img class="imagen" src="Imagenes/guata.jpg">
+        <div class="text">El departamento alberga áreas protegidas importantes, como el Parque Nacional Natural Chingaza y el Parque Nacional Natural Sumapaz, que son fundamentales para la conservación de especies endémicas y amenazadas, así como para la regulación de los servicios ecosistémicos, como el suministro de agua.</div>
+        </div>
+
+        <div class="diapositiva fade">
+        <div class="numbertext">3 / 3</div>
+        <img class="imagen" src="Imagenes/cu8.jpg">
+        <div class="text"> El departamento de Cundinamarca es hogar de una gran cantidad de especies de flora y fauna. Se estima que alrededor del 10% de las especies de aves del mundo se encuentran en Colombia, y muchas de estas especies se pueden encontrar en Cundinamarca. </div>
+        </div>
+
+        <!--Botones siguiente y anterior -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!--hecer los puntos/circulos -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+        </header><br><br>
+    </div>
+    <div class="encabezado"><h1>BIODIVERSIDAD EN CUNDINAMARCA</h1><br>
+        <p>Cundinamarca, en el centro de Colombia, destaca por su biodiversidad. Bosques con robles, cedros y guayacanes albergan una variada fauna. Sus páramos son cruciales para la regulación hídrica y la vida silvestre endémica. A pesar de su valor, enfrenta amenazas como la deforestación y la contaminación. Se realizan esfuerzos de conservación y desarrollo sostenible, incluyendo programas de reforestación y ecoturismo, para proteger sus recursos naturales.</p><br>
+    </div><br>
+<div class="galeria">
+    
+</div>
+<div>
+    <footer>
+        <p>
+            <h3 style="color: #fff;">Proyecto cocreacion</h3>
+            <p style="color: #fff;"> Ministerio de las comunicaciones en asocio con la universidad Sergio Arboleda <br> 
+                <i class="fa-solid fa-phone"></i> Teléfonos: (57) 310 2950253, <br> <i class="fa-regular fa-envelope"></i> Correo electrónico: edgar.ortiz.talentotech@usa.edu.co
+            </p> 
+            <p style="color: #fff;"><b>Copyright © 2024. Todos los derechos reservados.</b></p>
+        </p>
+    </footer>
+</div>
+</body>
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// controles siguiente anterior
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+// controles de imagen en miniatura
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("diapositiva");
+let dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+</script>
+<script src = "cundinamarca.js"></script>
+</body>
+</html>
